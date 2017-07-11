@@ -1,63 +1,66 @@
 var cardArray = ['tiger', 'tiger', 'zebra', 'zebra', 'crocodile', 'crocodile', 'koala', 'koala',
-									'hippo', 'hippo', 'giraffe', 'giraffe', 'parrot', 'parrot', 'elephant', 'elephant'];
+				'hippo', 'hippo', 'giraffe', 'giraffe', 'parrot', 'parrot', 'elephant', 'elephant'];
 
-var defaultBoard = [['-','-','-','-'],['-','-','-','-'],['-','-','-','-'],['-','-','-','-']]
-
-var shuffledArray = function() {
-	cardArray.sort(function() {
-	return 0.5 - Math.floor(Math.random()*16);
-})
-};
-
-class Tile() {
+class Tile {
 	constructor() {
 	    this.hidden = true;
 	    this.content;
 	}
-	
-	getContent() {
-	    this.content = cardArray
-	}
 }
 
-class Board() {
+var tilesList = [];
+
+for (var i = 0; i < 16; i++) {
+		var key = 'tile' + (i + 1);
+    this[ key ] = new Tile;
+    this[ key ].content = cardArray[i];
+    tilesList.push(key);
+}
+
+
+class Board {
     constructor() {
-        this.board = defaultBoard;
+        this.game = this.getBlankBoard();
+        this.tiles = this.setTiles();
         this.match = 0;
     }
-    
-    for (var i = 0; i < this.board.length; i++) {
-  	 for (var j = 0; j < this.board[i][j].length; j++) {
-    	this.board[i][j] = new Tile;
-         }
+  	
+    getBlankBoard() {
+    	return ['-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-'];
     }
+    
+    setTiles() {
+    	return tilesList.sort(function() {
+			return 0.5 - Math.floor(Math.random()*16);
+		});
+    }
+    
+  //TODO: Link the tiles(this.tiles) with the board(this.game)
   
-    play() {
-  	     var selected = this.board[x][y];
-  	     selected = shuffledArray[x][y];
-         selected.hidden = false;
-         return selected;
+    play(i) {
+    		var selected = this.tiles[i];
+        selected.hidden = false;
+        return selected;
     }
 
-    checkPair() {
-  	    var spot1 = Board.play();
-        var spot2 = Board.play();
-        if (spot1 != spot2) {
-    	spot1.hidden = true;
-        spot2.hidden = true;
-        } else {
-    	   match++;
+    checkPair(a,b) {
+  	    var spotA = this.play(a);
+        var spotB = this.play(b);
+        if (spotA.content != spotB.content) {
+    			spotA.hidden = true;
+        	spotB.hidden = true;
+        } else if (spotA.content == spotB.content) {
+    	   	match++;
         }
-    
-  }
-  
-    
+  	}
+   
    hasEnded() {
-   	if (match = 8) {
+   	if (match == 8) {
     	alert("Congratulations!");
-      this.board = ;
-      
+      this.game = this.getBlankBoard();
+      this.tiles = this.setTiles();
+      this.match = 0;
     }
    }
-  }
+  
 }
