@@ -1,6 +1,5 @@
 var cardArray = ['tiger', 'tiger', 'zebra', 'zebra', 'crocodile', 'crocodile', 'koala', 'koala',
-  'hippo', 'hippo', 'giraffe', 'giraffe', 'parrot', 'parrot', 'elephant', 'elephant'
-];
+  'hippo', 'hippo', 'giraffe', 'giraffe', 'parrot', 'parrot', 'elephant', 'elephant'];
 
 class Tile {
   constructor() {
@@ -19,7 +18,6 @@ for (var i = 0; i < 16; i++) {
 
 class Game {
   constructor() {
-    this.board = this.getBlankBoard();
     this.tiles = this.setTiles();
     this.visibleTiles = [];
     this.tilesFlipped = 0;
@@ -28,10 +26,6 @@ class Game {
   newGame() {
     this.board = this.getBlankBoard();
     this.tilesFlipped = 0;
-  }
-
-  getBlankBoard() {
-    return ['-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'];
   }
 
   setTiles() {
@@ -48,28 +42,27 @@ class Game {
     if (this.checkHidden(i)) {
       this.tiles[i].hidden = false;
       this.visibleTiles.push(this.tiles[i]);
-    } else {
-      alert("This spot is already openned!");
-      return false;
+      alert('This spot is now open');
     }
   }
 
   checkPair(a, b) {
-    if (this.play(a) && this.play(b)) {
+    if (this.checkHidden(a) === false && this.checkHidden(b) === false) {
       if (this.tiles[a].content === this.tiles[b].content) {
         this.tilesFlipped += 2;
-        this.visibleTiles === [];
+        alert('You have found a pair!');
+        this.visibleTiles = [];
       } else {
         this.tiles[a].hidden = true;
         this.tiles[b].hidden = true;
-        this.visibleTiles === [];
+        this.visibleTiles = [];
       }
-    }
+    } 
   }
 
   hasEnded() {
     if (this.tilesFlipped === 16) {
-      alert("Congratulations! The board will be reset.");
+      alert("Congratulations! You have found all pairs");
       this.newGame();
     }
     return false;
