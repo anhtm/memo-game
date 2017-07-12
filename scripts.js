@@ -4,7 +4,7 @@ var cardArray = ['tiger', 'tiger', 'zebra', 'zebra', 'rabbit', 'rabbit', 'koala'
 class Tile {
   constructor() {
     this.hidden = true;
-    this.content;
+    this.content
   }
 }
 
@@ -70,9 +70,94 @@ class Game {
 
 }
 
-// Implement
 
+// implement
 var ng = new Game();
+var cards = ng.tiles;
+
+//TEST IMAGES
+$("#0, #1").click(function() {
+    $(this).addClass("squirrel");
+});
+
+$("#2, #3").click(function() {
+    $(this).addClass("zebra");
+});
+
+$("#4, #5").click(function() {
+    $(this).addClass("parrot");
+});
+
+$("#6, #7").click(function() {
+    $(this).addClass("elephant");
+});
+
+$("#8, #9").click(function() {
+    $(this).addClass("giraffe");
+});
+
+$("#10, #11").click(function() {
+    $(this).addClass("koala");
+});
+
+$("#12, #13").click(function() {
+    $(this).addClass("rabbit");
+});
+
+$("#14, #15").click(function() {
+    $(this).addClass("monkey");
+});
+
+
+$("#reset").click(function() {
+    $(".tile").removeClass().addClass("tile");
+});
+
+// shuffle the tiles
+(function($){
+ 
+    $.fn.shuffle = function() {
+ 
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+ 
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
+ 
+        return $(shuffled);
+ 
+    };
+ 
+})(jQuery);
+
+$('td').shuffle();
+
+
+// Check Pair
+
+//var visibleTiles = [],
+//    match = 0;
+//    
+//function clickTile() {
+//    var $selected = $(".tile")
+//    $selected.each(function() {
+//        $(this).click(function() {
+//            visibleTiles.push($(this));
+//        });
+//    }
+//}
+
+
+
 
 
 
