@@ -1,0 +1,42 @@
+        html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Ubuntu', sans-serif;
+    }
+    
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #F08797;
+      overflow: hidden;
+    }
+    
+    #board {
+      width: 400px;
+      height: 400px;
+      margin: 20px auto;
+      background-color: #716A5C;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 14px 14px 0 0 #07020D;
+     }
+     
+     .tile {
+          background-color: #F1E9DB;
+          width: 80px;
+          height: 80px;
+          border: none;
+          border-radius: 6px;
+          box-shadow: 3px 3px 1px 0 #343039;
+     }
+     
+     #reset {
+          background-color: #F1E9DB;
+          width: 60px;
+          height: 30px;
+          border: none;
+          border-radius: 3px;
+        }

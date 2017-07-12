@@ -1,5 +1,5 @@
-var cardArray = ['tiger', 'tiger', 'zebra', 'zebra', 'crocodile', 'crocodile', 'koala', 'koala',
-  'hippo', 'hippo', 'giraffe', 'giraffe', 'parrot', 'parrot', 'elephant', 'elephant'];
+var cardArray = ['tiger', 'tiger', 'zebra', 'zebra', 'rabbit', 'rabbit', 'koala', 'koala',
+  'monkey', 'monkey', 'giraffe', 'giraffe', 'parrot', 'parrot', 'elephant', 'elephant'];
 
 class Tile {
   constructor() {
@@ -69,3 +69,16 @@ class Game {
   }
 
 }
+
+// Implement
+
+var ng = new Game();
+
+
+
+
+
+
+
+
+
