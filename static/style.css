@@ -105,4 +105,8 @@
             background-size: 100px 100px;
         }
 
+
+        .hidden {
+        background-image: none !important;
+    }
         
