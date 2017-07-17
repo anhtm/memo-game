@@ -6,7 +6,7 @@ To build a simple memory game application on computer, designed with bright colo
 An example of the game would look like [this](http://ep.yimg.com/ay/yhst-60941595948465/animals-wooden-memory-game-4.gif).
 
 ### Functionality 
-- The Game play:
+- Game rules:
     - A preset board has all of its tiles faced down. In order to win the game, all tiles need to be faced up.
     - To open up all the tiles, users need to find all of the pairs of identical tiles. If two tiles have the same image, the tiles stay flipped; else, they turn the face down. 
     
@@ -18,6 +18,6 @@ An example of the game would look like [this](http://ep.yimg.com/ay/yhst-6094159
 ### Wireframe
 The game is built using HTML/CSS, Javascript with jQuery. Click [here](https://wireframe.cc/NnO8yT) to see the wireframe of the game.
 
-
-
+### Game Play
+You can play the game [here](https://anhtm.github.io/memo-game/).
 
