@@ -37,10 +37,13 @@ class Game {
   }
 
   newGame() {
+    $(".tile").remove();
     this.tilesFlipped = 0;
     this.visibleActiveTiles = [];
     this.tiles = this.randomizeTiles();
     this.setHidden();
+    this.drawTiles();
+    registerTileClick();
   }
   
   setHidden() {
@@ -56,7 +59,7 @@ class Game {
   }
 
 
-	play(i) {
+  play(i) {
   
   	if (this.checkHidden(i) === true) {
     	this.tiles[i].hidden = false;
@@ -66,7 +69,7 @@ class Game {
       
       	if (this.visibleActiveTiles[0].content === this.visibleActiveTiles[1].content) {
           this.tilesFlipped += 2;
-          alert("You have found a pair!");
+          //alert("You have found a pair!");
           this.visibleActiveTiles = [];
           this.hasEnded();
         } else if (this.visibleActiveTiles[0].content !== this.visibleActiveTiles[1].content) {
@@ -91,13 +94,13 @@ class Game {
     }
   }
 
-    drawTiles() {
+  drawTiles() {
         for (var i = 0; i < this.tiles.length; i++) {
         $("#board").append($('<div class="tile hidden ' +this.tiles[i].content + '" id=' + i + '></div>'));
 	}
     }
     
-    redraw() {
+  redraw() {
 
         for (var i = 0; i < this.tiles.length; i++) {
             if (this.tiles[i].hidden) {
@@ -115,9 +118,8 @@ class Game {
 
 var ng = new Game();
 
-$(document).ready(function(){
-    ng.drawTiles();
-	$(".tile").click(function() {
+function registerTileClick() {
+    $(".tile").click(function() {
       	var id = $(this).attr('id');
       	ng.timeOut(id);
 
@@ -127,12 +129,15 @@ $(document).ready(function(){
         }, 500);
         
      });
-     
+}
+
+$(document).ready(function(){
+    ng.drawTiles();
+    registerTileClick(); 
     $("#reset").click(function() {
-        $(".tile").remove();
-        ng.drawTiles();
         ng.newGame();
     });
+    
 });
 
 
