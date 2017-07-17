@@ -57,65 +57,54 @@
           border-radius: 3px;
         }
         
-        #reset:hover {
-          background-color: #D7D9D3;
-        }
-        
-        #reset:active {
-          background-color: #CCCEC6;
-          box-shadow: 1px 1px 1px #343039;
-          transform: translateY(4px);
-        
         .zebra {
-            background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/115587-200.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/115587-200.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
         
         .rabbit {
-            background-image: url("https://maxcdn.icons8.com/Share/icon/ios7/Holidays//easter_rabbit1600.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://maxcdn.icons8.com/Share/icon/ios7/Holidays//easter_rabbit1600.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
         
         .koala {
-            background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/176779-200.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/176779-200.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
         
         .monkey {
-            background-image: url("https://www.shareicon.net/download/2016/01/17/704525_zoo_512x512.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://www.shareicon.net/download/2016/01/17/704525_zoo_512x512.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
         
         .giraffe {
-            background-image: url("https://image.flaticon.com/icons/png/512/12/12606.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://image.flaticon.com/icons/png/512/12/12606.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
         
         .parrot {
-            background-image: url("https://www.shareicon.net/download/2016/11/28/857811_bird_512x512.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://www.shareicon.net/download/2016/11/28/857811_bird_512x512.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
         
         .elephant {
-            background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/14048-200.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/14048-200.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
         
         .squirrel {
-            background-image: url("https://image.flaticon.com/icons/png/512/26/26098.png");
-            background-repeat: no-repeat;
-            background-size: 100px 100px;
+          background-image: url("https://image.flaticon.com/icons/png/512/26/26098.png");
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
         }
-
-
+        
         .hidden {
-            background-image: none !important;
+          background-image: none !important;
         }
-            
