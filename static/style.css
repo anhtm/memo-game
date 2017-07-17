@@ -57,12 +57,21 @@
           border-radius: 3px;
         }
         
-
+        #reset:hover {
+          background-color: #D7D9D3;
+        }
+        
+        #reset:active {
+          background-color: #CCCEC6;
+          box-shadow: 1px 1px 1px #343039;
+          transform: translateY(4px);
+        
         .zebra {
             background-image: url("https://d30y9cdsu7xlg0.cloudfront.net/png/115587-200.png");
             background-repeat: no-repeat;
             background-size: 100px 100px;
         }
+        
         .rabbit {
             background-image: url("https://maxcdn.icons8.com/Share/icon/ios7/Holidays//easter_rabbit1600.png");
             background-repeat: no-repeat;
@@ -107,6 +116,6 @@
 
 
         .hidden {
-        background-image: none !important;
-    }
-        
+            background-image: none !important;
+        }
+            
