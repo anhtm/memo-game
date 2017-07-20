@@ -1,5 +1,4 @@
-# Project Proposal
-## MemoZoo
+# memo-game
 ***
 ### Objectives
 To build a simple memory game application on computer, designed with bright colors and animated animal images. This is aimed towards young users (i.e: Children aged 2 - 6) to enhance memorizing skills and broaden animal perceptions.
